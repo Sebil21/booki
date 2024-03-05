@@ -1,0 +1,79 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-container img {
+  width: 61px;
+  height: 19px;
+  padding: 30px 0;
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 68px;
+}
+
+.menu-link {
+  padding-top: 15px;
+  border-top: 2px solid transparent;
+}
+
+.menu-link:hover {
+  border-top: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+/*HEADLINE*/
+.headline h1 {
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.headline p {
+  font-family: var(--link-font);
+  font-size: var(--link-font-size);
+  font-weight: var(--link-font-weight);
+  line-height: var(--link-line-height);
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+/* Tablette fonctionne --> Pas besoin de media query */
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container nav {
+    font-size: 16px;
+    gap: 0;
+    width: 100%; /*prends la largeur de mon container*/
+    justify-content: space-around;
+    border-bottom: 2px solid var(--main-bg-color);
+  }
+
+  .menu-link {
+    padding-top: 0;
+    padding-bottom: 15px; /*écart entre ligne et texte nav*/
+    margin-bottom: -1px; /*border grise superposé à border bleue*/
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-link:hover {
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-top: 0 solid transparent;
+  }
+
+  .headline {
+    padding: 0 20px;
+  }
+}
